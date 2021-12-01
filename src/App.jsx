@@ -7,10 +7,15 @@ import team from "./data/employees";
 
 
 function App() {
+
+  const employeeInfo = team.map((employee, index) => {
+    return <EmployeeTile key ={index} name ={employee.name} role = {employee.role}/>
+  })
+
   return (
     <div className="App">
       <Header/>
-      <EmployeeTile/>
+      {employeeInfo}
     </div>
   );
 }

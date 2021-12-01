@@ -1,12 +1,19 @@
 import React from "react";
 import "./EmployeeTile.scss"
 
-const EmployeeTile = (props) =>{
-return (
+const EmployeeTile = (props) => {
 
+const {name, role, employeeArr} = props
+
+
+
+
+  return (
+<>
 <div className="tile">
-  <p className="tile__name">Name: {props.name}</p>
-  <p className="tile__role">Role: {props.role}</p>
+  <p>{name}</p>
+  <p>{role} </p>
+  
   <div className="tile__counter">
     <p className="tile__counter__heading">Counter</p>
     <p className="tile__counter__total">0</p>
@@ -15,6 +22,7 @@ return (
 
   </div>
 </div>
+</>
 )
 
 };
