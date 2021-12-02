@@ -1,18 +1,26 @@
 @use "../../assets/sass/_variables.scss"as *;
 
 .tile {
+  background-color: $color-beige;
   height: 300px;
   width: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   font-family: $font-primary;
-  border: 3px dashed $color-red;
+  border: 3px dashed $color-brown;
+  font-weight: 1500;
+  
   
   
   
 
   .tile__counter {
+    
+    margin-left: 10px ;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 3px groove $color-red;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -20,6 +28,8 @@
     .tile__counter__heading {
       grid-row: 1/2;
       grid-column: 1/3;
+      font-weight: 900;
+      
     }
 
     .tile__counter__total {
@@ -28,13 +38,24 @@
     }
 
     .tile__counter__minus {
+      &:hover{
+        cursor: grab;
+      }
+      font-size: 20px;
+      font-weight: 900;
       grid-row: 3/4;
       grid-column: 1/2;
     }
 
     .tile__counter__plus {
+      &:hover{
+        cursor: grab;
+      }
+      font-size: 20px;
+      font-weight: 900;
       grid-row: 3/4;
       grid-column: 2/3;
+     
     }
   }
 }
